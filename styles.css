@@ -1,0 +1,472 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Nunito&display=swap');
+:root {
+    --color: rgb(235, 98, 98);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    text-decoration: none;
+    text-transform: capitalize;
+    line-height: 1.5;
+    transition: all 0.2s ease-in-out ;
+    letter-spacing: .2rem;
+}
+
+html  {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #fcf2e8;
+}
+/* containers */
+.parent-container {
+    display: grid;
+    grid-template-columns: 31% 68%;
+}
+
+.left-container-parent {
+    min-height: 100vh;
+    /* s */
+}
+
+.container-left {
+    position: sticky; 
+    top: 0;
+    height: 100vh; 
+    top: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-flow: column;
+    background-color: rgb(36, 32, 31);
+    z-index: 999;
+    padding: 8rem 2rem;
+    text-align: center;
+}
+
+.name, span {
+    text-transform: uppercase;
+    color: white;
+    font-weight: bolder;
+    font-size: 3rem;
+}
+
+span  {
+    color: var(--color);
+}
+
+.navbar a {
+    display: block;
+    font-size: 2rem;
+    margin: 2rem 0;
+    color: white;
+}
+.navbar a:hover {
+    color: var(--color);
+}
+
+.socials a {
+    font-size: 2.5rem;
+    color: white;
+}
+.socials a:hover {
+    color: var(--color);
+}
+.tagline {
+    font-size: 1.1rem;
+    color: white;
+}
+
+/* Right Section */
+
+.container-right {
+    min-height: 100vh;
+    padding: 1rem 5rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.logo {
+    position: absolute;
+    width: 100%;
+    margin-top: 2rem;
+}
+.ks {
+    position: absolute;
+    margin-left: 65%;
+    /* margin-left: 85%; */
+    height: 5rem;
+    width: 10rem;
+}
+.greeting {
+    font-size: 2rem;
+    color: rgb(0, 0, 0);
+}
+.tagline {
+    font-size: 1.1rem;
+    color: white;
+}
+.text {
+    margin-top: 1rem;
+    width: 40rem;
+}
+.resume {
+    border: none;
+    padding: 2rem 8rem;
+    background-color: var(--color);
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    margin-top: 3rem;
+    cursor: pointer;
+}
+
+.images {
+    width: 45%;
+    height: 80%;
+    position: absolute;
+    bottom: 0;
+    right: 100px;
+}
+.images img{
+    height: 100%;
+    position: absolute;
+    left: 98%;
+    bottom: 0;
+    transform: translateX(-50%);
+    transition: bottom 1s, left 1s;
+}
+.images .shape{
+    left: 100%;
+}
+
+.images:hover .shape{
+    bottom: 3rem;
+}
+.images:hover .profile{
+    left: 93%;
+
+}
+.bottom-line {
+    height: 2px;
+    background-color: var(--color);
+    bottom: 0;
+}
+.skills,.projects {
+    margin-top: 5rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns:auto auto;
+    grid-gap: 5rem;
+}
+.skills img {
+    height: 7rem;
+    width: 7rem;
+    border-radius: 100%;
+    border: 2px solid white ;
+    float: left;
+}
+.skills div {
+    width: 40rem;
+}
+.skill-1,.skill-2,.skill-3, .skill-4 {
+    background-color: var(--color);
+    padding: 4rem 2rem;
+    color: white;
+}
+.skill-1 p,.skill-2 p,.skill-3 p, .skill-4 p {
+    width: 25rem;
+}
+.skill-container {
+    height: 100vh;
+}
+.content-skill {
+    padding-left: 10rem;
+}
+.skill-row {
+    /* width: 100%; */
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    /* flex-direction: row; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* margin-left: 4rem; */
+}
+.skill-1,.skill-2,.skill-3,.skill-4,.skill-5 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem;
+    width: 11rem;
+    height: 11rem;
+    background-color: var(--color);
+    border-radius: 100%;
+    font-size: 10px;
+    cursor: pointer;
+}
+.skill-1 i,.skill-2 i,.skill-3 i,.skill-4 i,.skill-5 i {
+    font-size: 3rem;
+}
+.skill-1 p,.skill-2 p,.skill-3 p,.skill-4 p,.skill-5 p {
+    width:fit-content;
+    margin-top: 1rem;
+    text-align: center;
+    /* padding-left: 30%; */
+}
+/* .skill-greet {
+    margin-left: 17rem;
+    margin-top: 5rem;
+} */
+.skill-container {
+    display: grid;
+    grid-template-rows: repeat(3,minmax(2rem, auto));
+    min-height: 70vh !important;
+    height: 70vh;
+}
+
+/* Projects */
+
+
+.container-project {
+    align-items:flex-start;
+    display: grid;
+    grid-template-rows: repeat(3,minmax(2rem, auto));
+    /* gap: 2rem; */
+}
+.card {
+    position: relative;
+    width: 40rem;
+    height: 20rem;
+    border: 2px solid var(--color);
+    background-color: var(--color);
+    /* margin-right: 5rem; */
+}
+.card-img {
+position: absolute;
+width: 100%;
+height: 100%;
+z-index: 2;
+/* border: 2px solid var(--color); */
+}
+.card-img img {
+width: 100%;
+height: 100%;
+}
+
+.card-body {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    border: 2px solid var(--color);
+    /* z-index: -1; */
+}
+.card-body button {
+    width: 100%;
+    height: 3rem;
+    border: none;
+    background-color: white;
+    color: var(--color);
+    font-weight: bolder;
+    cursor: pointer;
+}
+.card:hover .card-body {
+    transform: translateY(130%);
+}
+.card:hover .card-content {
+    position: absolute;
+}
+.card-content {
+    opacity: 0.7;
+    position: none;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    color: white;
+    padding: 2rem 5rem;
+    background-color: rgb(36, 36, 36);
+}
+.card-content h1 {
+ font-size: 4rem;
+}
+
+.row {
+    /* display: flex;
+    flex-direction: row; */
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 5rem;
+}
+
+/* contact */
+
+.container-contact {
+    /* padding: 0 0 0 15rem; */
+    justify-content: center;
+}
+.contact-card {
+    display: flex;
+    flex-direction: row;
+    width: 70rem;
+    height: 40rem;
+    background-color: var(--color);
+    color: white;
+}
+.left {
+    width: 40%;
+    padding-left: 2rem;
+    padding-top: 5rem;
+}
+.right {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.right form {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+}
+.right form input {
+    opacity: 0.7;
+    color: white;
+    width: 100%;
+    border:none;
+    background-color: var(--color);
+    border-bottom: 2px solid white;
+    margin-bottom: 3.5rem;
+    padding: 0.5rem;
+}
+.right form h3 {
+    margin-bottom: 5rem;
+}
+::placeholder {
+    color: white;
+}
+*:focus {
+    outline: none;
+}
+.right form button {
+    width: 100%;
+    height: 3rem;
+    margin-top: 2rem;
+    border: none;
+    background-color: white;
+    color: var(--color);
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+@media (max-width:991px) {
+    html  {
+        font-size: 55%;
+    }
+    .images  {
+        height: 60%;
+    }
+    .skill-1,.skill-2,.skill-3,.skill-4,.skill-5 {
+        width: 9rem;
+        height: 9rem;
+    }
+    .skill-1 i,.skill-2 i,.skill-3 i,.skill-4 i,.skill-5 i {
+        font-size: 2.5rem;
+    }
+    .skill-1 p,.skill-2 p,.skill-3 p,.skill-4 p,.skill-5 p {
+        margin-top: 0.7rem;
+    }
+    .card {
+        width: 30rem;
+        height: 15rem;
+    } 
+    
+}
+@media (max-width:769px) {
+    html  {
+        font-size: 50%;
+    }
+    .profile {
+        display: none;
+    }
+    .shape {
+        z-index: -1;
+        bottom: 130%;
+        animation-name: float;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+    }
+    @keyframes float {
+        0% {
+            bottom: 130%;
+        }
+        25% {
+            bottom: 120%;
+        }
+        50% {
+            bottom: 110%;
+        }
+        75% {
+            bottom: 115%;
+        }
+        100% {
+            bottom: 130%;
+        }
+           
+    }
+    .skill-1,.skill-2,.skill-3,.skill-4,.skill-5 {
+        width: 9rem;
+        height: 9rem;
+    }
+    .skill-1 i,.skill-2 i,.skill-3 i,.skill-4 i,.skill-5 i {
+        font-size: 2.5rem;
+    }
+    .skill-1 p,.skill-2 p,.skill-3 p,.skill-4 p,.skill-5 p {
+        margin-top: 0.7rem;
+    }
+    .card {
+        width: 30rem;
+        height: 15rem;
+    } 
+    .skill-row {
+        
+    grid-template-columns: repeat(4,1fr);
+    }
+}
+@media (max-width:481px) {
+    .skill-row {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
